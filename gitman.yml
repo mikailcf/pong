@@ -1,0 +1,9 @@
+location: .gitman
+sources:
+  - repo: https://github.com/mikailcf/godot_modules
+	name: godot-modules
+	rev: main
+	type: git
+	links:
+	  - target: modules
+default_group: ''
