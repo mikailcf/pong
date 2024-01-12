@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3cwqunwcm3hf"]
+[gd_scene load_steps=7 format=3 uid="uid://b3cwqunwcm3hf"]
 
 [ext_resource type="Script" path="res://scenes/PongGame/PongGame.gd" id="1_trn3m"]
 [ext_resource type="PackedScene" uid="uid://d0ka0o5yabhls" path="res://scenes/Player/Player.tscn" id="2_11ly7"]
+[ext_resource type="PackedScene" uid="uid://cgsjf35gq3877" path="res://scenes/Opponent/Opponent.tscn" id="3_aa3k0"]
+[ext_resource type="PackedScene" uid="uid://b20euyia07wi6" path="res://scenes/Ball/Ball.tscn" id="4_wsak6"]
 
 [sub_resource type="Gradient" id="Gradient_cbo8f"]
 colors = PackedColorArray(0.16, 0.16, 0.16, 1, 0.16, 0.16, 0.16, 1)
@@ -19,3 +21,9 @@ texture = SubResource("GradientTexture2D_uljhh")
 
 [node name="Player" parent="." instance=ExtResource("2_11ly7")]
 position = Vector2(79, 318)
+
+[node name="Opponent" parent="." instance=ExtResource("3_aa3k0")]
+position = Vector2(1071, 321)
+
+[node name="Ball" parent="." instance=ExtResource("4_wsak6")]
+position = Vector2(549, 313)

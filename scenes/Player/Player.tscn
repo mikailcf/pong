@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://scenes/Player/Player.gd" id="1_wo814"]
 
-[sub_resource type="Gradient" id="Gradient_a8ht2"]
+[sub_resource type="Gradient" id="Gradient_ho1l8"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_rmrxn"]
-gradient = SubResource("Gradient_a8ht2")
+gradient = SubResource("Gradient_ho1l8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wth1g"]
 size = Vector2(26, 128)

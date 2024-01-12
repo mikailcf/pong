@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://b20euyia07wi6"]
+
+[ext_resource type="Script" path="res://scenes/Ball/Ball.gd" id="1_6d732"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tat22"]
+size = Vector2(26, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdfut"]
+size = Vector2(26, 26)
+
+[sub_resource type="Gradient" id="Gradient_qaej1"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ksjvc"]
+gradient = SubResource("Gradient_qaej1")
+
+[node name="Ball" type="AnimatableBody2D"]
+sync_to_physics = false
+script = ExtResource("1_6d732")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tat22")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hdfut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1.52588e-05)
+scale = Vector2(0.1, 26)
+texture = SubResource("GradientTexture1D_ksjvc")
