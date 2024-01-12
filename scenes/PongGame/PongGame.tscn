@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3cwqunwcm3hf"]
+[gd_scene load_steps=11 format=3 uid="uid://b3cwqunwcm3hf"]
 
 [ext_resource type="Script" path="res://scenes/PongGame/PongGame.gd" id="1_trn3m"]
 [ext_resource type="PackedScene" uid="uid://d0ka0o5yabhls" path="res://scenes/Player/Player.tscn" id="2_11ly7"]
@@ -10,6 +10,18 @@ colors = PackedColorArray(0.16, 0.16, 0.16, 1, 0.16, 0.16, 0.16, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_uljhh"]
 gradient = SubResource("Gradient_cbo8f")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxeb"]
+size = Vector2(1152.5, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i230v"]
+size = Vector2(1152, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k44in"]
+size = Vector2(20, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd512"]
+size = Vector2(20, 646)
 
 [node name="PongGame" type="Node2D"]
 script = ExtResource("1_trn3m")
@@ -27,3 +39,29 @@ position = Vector2(1071, 321)
 
 [node name="Ball" parent="." instance=ExtResource("4_wsak6")]
 position = Vector2(549, 313)
+
+[node name="Top" type="Area2D" parent="." groups=["hor_bound"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(576, -26)
+shape = SubResource("RectangleShape2D_ycxeb")
+
+[node name="Bottom" type="Area2D" parent="." groups=["hor_bound"]]
+position = Vector2(0, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(576, 10)
+shape = SubResource("RectangleShape2D_i230v")
+
+[node name="Left" type="Area2D" parent="." groups=["vert_bound"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-10, 324)
+shape = SubResource("RectangleShape2D_k44in")
+
+[node name="Right" type="Area2D" parent="." groups=["vert_bound"]]
+position = Vector2(1152, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(10, 323)
+shape = SubResource("RectangleShape2D_hd512")
