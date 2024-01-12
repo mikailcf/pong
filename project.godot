@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameSingleton="*res://modules/game_root/game_singleton.gd"
+InputControl="*res://modules/input_control/input_control.gd"

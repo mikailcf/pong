@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmimmedn3f1dl"]
 
 [ext_resource type="PackedScene" uid="uid://c2ovsx85kp6ow" path="res://modules/game_root/game_root.tscn" id="1_iyf4a"]
-[ext_resource type="PackedScene" uid="uid://b3cwqunwcm3hf" path="res://scenes/PongGame.tscn" id="2_64wku"]
+[ext_resource type="PackedScene" uid="uid://b3cwqunwcm3hf" path="res://scenes/PongGame/PongGame.tscn" id="2_64wku"]
 
 [node name="Root" type="Node"]
 
